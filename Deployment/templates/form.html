@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<style>
+    form {
+        display: table;
+    }
+
+    p {
+        display: table-row;
+    }
+
+    label {
+        display: table-cell;
+    }
+
+    input {
+        display: table-cell;
+    }
+
+    body {
+        background-image: url('/static/p2.jpg');
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        /* background-size: cover; */
+    }
+</style>
+
+<body>
+    <h3 align="left">
+        <a href="/">Go home</a>&nbsp;&nbsp;&nbsp;
+    </h3>
+    <form method="post" action="/data">
+
+        <p>
+            <label for="age">Which Age category do you lie in:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select id="age" name="age">
+                <option value="21">18-24</option>
+                <option value="27">25-29</option>
+                <option value="32">30-34</option>
+                <option value="37">35-39</option>
+                <option value="42">40-44</option>
+                <option value="47">45-49</option>
+                <option value="52">50-54</option>
+                <option value="57">55-59</option>
+                <option value="62">60-64</option>
+                <option value="67">65-69</option>
+                <option value="72">70-74</option>
+                <option value="77">75-79</option>
+                <option value="80">80 or older</option>
+            </select>
+
+        </p><br>
+
+        <p>
+            <label for="sex">Sex:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select id="sex" name="sex">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+        </p><br>
+
+
+
+        <p>
+            <label for="race">Ethnicity:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select id="race" name="race">
+                <option>White</option>
+                <option>Black</option>
+                <option>Asian</option>
+                <option>American Indian/Alaskan Native</option>
+                <option>Hispanic</option>
+                <option>Other</option>
+
+            </select>
+
+        </p><br>
+
+        <p>
+            <label for="GH">In General Health your health is:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select id="GH" name="GH">
+                <option  value="4"  >Excellent</option>
+                <option  value="3"  >Very good</option>
+                <option  value="2"  >Good</option>
+                <option  value="1"  >Fair</option>
+                <option  value="0"  >Poor</option>
+
+            </select>
+
+        </p><br>
+
+        <p>
+
+
+            <label for="bmi">BMI:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <select id="bmi" name="bmi">
+
+                <option value="Uwt" title="(BMI&lt;18.5)">Underweight </option>
+                <option value="N" title="(18.5&lt;=BMI&lt;24.9)">Normal</option>
+                <option value="Owt" title="(24.9&lt;=BMI&lt;29.9)">Overweight</option>
+                <option value="O" title="(29.9&lt;=BMI&lt;34.9)">Obese</option>
+                <option value="EO" title="(34.9&lt;=BMI)">Extreme Obese</option>
+
+            </select>
+
+
+        </p><br>
+
+
+        <p>
+            <label for="smoke">Do you smoke ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="smoke" name="smoke" value="1">Yes
+            <input type="radio" id="smoke" name="smoke" value="0" required>No
+
+        </p><br>
+
+
+
+        <p>
+            <label for="sleep">On an average how much sleep do you get ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="sleep" name="sleep">
+
+                <option value="Low" title="hrs">&lt;6</option>
+                <option value="Normal" title="hrs">6-9</option>
+                <option value="High" title="hrs">&gt;9</option>
+
+            </select>
+
+        </p><br>
+
+        <p>
+            <label for="DiffWalking">Do you have serious difficulty walking or climbing stairs
+                ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="DiffWalking" name="DiffWalking" value="1">Yes
+            <input type="radio" id="DiffWalking" name="DiffWalking" value="0" required>No
+
+        </p><br>
+
+        <p>
+            <label for="PhysicalActivity">Do you do any exercise or physical activity
+                ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="PhysicalActivity" name="PhysicalActivity" value="1">Yes
+            <input type="radio" id="PhysicalActivity" name="PhysicalActivity" value="0" required>No
+
+        </p><br>
+
+
+        <p>
+            <label for="PhysicalHealth">How many days has your physical health not been <br>good in the past month
+                ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="PhysicalHealth" required="required" id="PhysicalHealth" min="0" max="30">
+        </p><br>
+
+        <p>
+            <label for="Diabetic">Are you diabetic ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select id="Diabetic" name="Diabetic">
+
+                <option  value="Y">Yes</option>
+                <option  value="Y_preg">Yes (during pregnancy)</option>
+                <option  value="N_bd">No, borderline diabetes</option>
+                <option  value="N" >No</option>
+
+
+            </select>
+
+        </p><br>
+
+        <p>
+            <label for="Asthma">Do you have Asthma ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="Asthma" name="Asthma" value="1">Yes
+            <input type="radio" id="Asthma" name="Asthma" value="0" required>No
+
+        </p><br>
+
+        <p>
+            <label for="KidneyDisease">Do you have KidneyDisease ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="KidneyDisease" name="KidneyDisease" value="1">Yes
+            <input type="radio" id="KidneyDisease" name="KidneyDisease" value="0" required>No
+
+        </p><br>
+
+        <p>
+            <label for="SkinCancer">Do you have SkinCancer ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="SkinCancer" name="SkinCancer" value="1">Yes
+            <input type="radio" id="SkinCancer" name="SkinCancer" value="0" required>No
+
+        </p><br>
+
+        <p>
+            <label for="Stroke">Have you had a stroke before ?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="Stroke" name="Stroke" value="1">Yes
+            <input type="radio" id="Stroke" name="Stroke" value="0" required>No
+
+        </p><br>
+
+
+
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+            type="reset">
+    </form>
+</body>
+
+</html>
